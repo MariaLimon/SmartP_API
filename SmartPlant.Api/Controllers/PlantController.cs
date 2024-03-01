@@ -34,7 +34,7 @@ public class PlantController : ControllerBase
             ModelState.AddModelError("Name","La planta no debe estar vacio");
         if(plantToInsert.TypePlant == string.Empty)
             ModelState.AddModelError("Type","La planta no debe estar vacio");
-        if(Convert.ToString(plantToInsert.UserId) == string.Empty)
+        if(plantToInsert.UserId == ObjectId.Empty)
             ModelState.AddModelError("User","La planta no debe estar vacio");
 
 
@@ -68,7 +68,7 @@ public class PlantController : ControllerBase
             ModelState.AddModelError("Name","No debe dejar el nombre vacio");
         if(plant.TypePlant == string.Empty )
             ModelState.AddModelError("Tipo","No debe dejar el tipo vacio");
-        if(Convert.ToString(plant.UserId) == string.Empty)
+        if(plant.UserId == ObjectId.Empty)
             ModelState.AddModelError("User","No debe dejar el user vacio");
 
         await _plantServices.UpdatePlant(plant);

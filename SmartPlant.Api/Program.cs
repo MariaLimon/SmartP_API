@@ -14,6 +14,9 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddSingleton<UserServices>();/////
 builder.Services.AddSingleton<PlantServices>();/////
+builder.Services.AddSingleton<ElectrovalveServices>();/////
+builder.Services.AddSingleton<HumServices>();/////
+builder.Services.AddSingleton<SizeServices>();/////
 
 var app = builder.Build();
 

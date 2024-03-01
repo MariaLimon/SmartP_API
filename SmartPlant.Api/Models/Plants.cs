@@ -10,8 +10,7 @@ namespace SmartPlant.Api.Models
         public string Id {get; set;} = string.Empty;
 
         [BsonElement("Users")] // Nombre del campo que almacenará el ID del usuario
-        [BsonRepresentation(BsonType.ObjectId)]
-        public string UserId { get; set; } = string.Empty;
+        public ObjectId UserId { get; set; } = ObjectId.Empty;
 
         [BsonElement("NamePlant")]
         public string NamePlant {get; set;} = string.Empty;
