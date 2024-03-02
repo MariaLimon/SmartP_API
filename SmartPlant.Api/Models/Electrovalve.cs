@@ -13,6 +13,6 @@ namespace SmartPlant.Api.Models
         public bool Open {get; set;}
 
         [BsonElement("Date")]
-        public DateOnly Date {get; set;}
+        public DateTime Date {get; set;}
     }
 }
